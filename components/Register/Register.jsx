@@ -31,7 +31,7 @@ function Register() {
          formData.forEach((val, key) => {
         console.log(val,key)
     })
-        const response = await fetch('https:localhost:8000/user/register', {
+        const response = await fetch('http://localhost:8080/user/register', {
             method: 'POST',
             body: formData
         })
@@ -43,7 +43,7 @@ function Register() {
     useEffect(() => {
         if (status === 'Success') {
             alert(message)
-            navigate('/register')
+            navigate('/')
             setMessage('')
             setStatus("")
             return

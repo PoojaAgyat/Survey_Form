@@ -1,9 +1,6 @@
 import './Login.css'
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
+import { Link ,useNavigate } from 'react-router-dom';
 
 function Login() {
     const navigate = useNavigate();
@@ -19,7 +16,7 @@ function Login() {
         const formData = new FormData()
         formData.append("email",email)
         formData.append("password",password)
-        const response = await fetch('https:localhost:8000/user/login', {
+        const response = await fetch('http://localhost:8080/user/login', {
             method: 'POST',
             body:formData,
         
@@ -61,8 +58,8 @@ function Login() {
                     <span className='second'>One line text</span><br />
                     <span className='third'> Will Be Here</span></h1>
                 <p>Sign in to continue access pages</p>
-                <p className='smallpara'>Don't Have An Account?</p>
-                <Link to={'/Register'}><button>Register</button></Link>
+                <p className='smallpara'>Don’t Have An Account?</p>
+                <Link to={'/register'}><button>Register</button></Link>
             </div>
             <div className='login'>
                 <div className='loginheader'>
