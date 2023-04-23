@@ -1,3 +1,13 @@
+import React, { useState, useEffect, useContext } from "react";
+import "./Styles/survey-list.css"
+import data from "../data.json"
+import SearchIcon from '@mui/icons-material/Search';
+import { useNavigate } from "react-router-dom";
+import { ThemeContext } from "../App";
+import Header from "./Header";
+import Sidebar from './Sidebar';
+import Card from "./card";
+
 const SurveyList = () => {
 
     const { themes, first, getData, data } = useContext(ThemeContext)
