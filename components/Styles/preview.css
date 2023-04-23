@@ -1,0 +1,26 @@
+.preview-container{
+    position: absolute;
+    top:70px;
+    left:75px;
+    padding-top: 60px;
+    padding-left: 80px;
+    height: 100vh;
+    width: 100vw;
+    /* pointer-events: none; */
+    z-index: -1;
+  
+}
+.preview-container-Default{
+    background-color: #FFFFFF;
+}
+.preview-container-Dark{
+    background-color: #212121;
+}
+.preview-container-pink{
+    background-color: #f9f1f8;
+}
+.preview-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
