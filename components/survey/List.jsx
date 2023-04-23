@@ -49,7 +49,7 @@ const List = () => {
         formData.append("file", image);
         formData.append("upload_preset", "instapost");
    
-        fetch("https://localhost:8080/image/upload", {
+        fetch("https://api.cloudinary.com/v1_1/dbktreuss/image/upload", {
             method: "POST",
             body: formData,
         })

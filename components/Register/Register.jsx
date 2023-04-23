@@ -43,7 +43,7 @@ function Register() {
     useEffect(() => {
         if (status === 'Success') {
             alert(message)
-            navigate('/')
+            navigate('/')     //login
             setMessage('')
             setStatus("")
             return
