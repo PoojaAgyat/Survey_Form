@@ -1,0 +1,94 @@
+.transparent-back{
+    position: absolute;
+    z-index: 12;
+    background-color: rgb(43, 54, 65,.4);
+    width: 100vw;
+    height: 100vh;
+    bottom: -6.5rem;
+    right: -61rem;
+}
+.theme-container{
+    width: fit-content;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid rgb(112, 112, 112);
+    margin: 10% auto;
+    border-radius: 2rem;
+}
+#close-icon{
+    width: 1rem;
+    height: 1rem;
+    background: transparent url('../../public/images/close.svg') 0% 0% no-repeat padding-box;
+    background-size: cover;
+}
+.border-bot{
+    border-bottom: .1rem solid grey;
+    padding: .5rem 1.5rem;
+}
+.list-header h3{
+    font-size: 1rem;
+}
+.theme-form >div:first-child{
+    border-bottom: .1rem solid grey;
+    padding: 1.5rem;
+}
+.theme-form select{
+    width: 11rem;
+}
+.theme-form >div:first-child select{
+    width: 40%;
+}
+.theme-form >div:nth-child(3){
+    display: flex;
+    padding: 1.5rem;
+    justify-content: space-around;
+    justify-items: center;
+    border-bottom:  .1rem solid grey;
+}
+.theme-form label{
+    display: block;
+    margin-bottom: .5rem;
+}
+.grid-form{
+    border-bottom: .1rem solid grey;
+    display: grid;
+    grid-template-columns: auto;
+}
+.grid-form >div:first-child{
+    grid-column: 1/2;
+}
+.grid-form >div:nth-child(2){
+    grid-column: 2/3;
+}
+.grid-form >div:nth-child(3){
+    grid-column: 3/4;
+}
+.grid-form div{
+    margin: .75rem;
+}
+#themename{
+    border: .1rem solid rgb(185, 184, 184);
+    width: 95%;
+    padding: .5rem;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+#color{
+    width: 150%;
+    height: 70%;
+}
+#close-icon:hover{
+    cursor: pointer;
+    border: .1rem solid black;
+    transition: transform .2s;
+    transform: scale(1.2);
+}
+.theme-btn{
+    padding: 3%;
+    width: 40%;
+    margin: auto;
+}
+.theme-btn #cancel-btn:hover, .theme-btn #next-btn:hover{
+    cursor: pointer;
+    transition: transform .2s;
+    transform: scale(1.2);
+}
