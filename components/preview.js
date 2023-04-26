@@ -25,7 +25,7 @@ const Preview = () => {
         questionData.append("questions", JSON.stringify(location.state.data.questions))
         questionData.append("option", JSON.stringify(location.state.data.arr))
      
-        fetch("http://localhost:8080/createForm", {
+        fetch("https://survey-backend-gg92.onrender.com/createForm", {
             method: "POST",
             headers:{Authorization:token},
             body: questionData
