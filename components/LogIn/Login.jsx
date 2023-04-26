@@ -1,6 +1,7 @@
 import './Login.css'
 import { useEffect, useState } from 'react';
 import { Link ,useNavigate } from 'react-router-dom';
+
 function Login() {
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
@@ -8,14 +9,17 @@ function Login() {
     const [token, setToken] = useState('');
     const [message,setMessage] = useState("")
     const [status,setStatus] = useState("")
+
     async function loginUser(event) {
+
         event.preventDefault();
         const formData = new FormData()
         formData.append("email",email)
         formData.append("password",password)
-        const response = await fetch('https://survey-backend-gg92.onrender.com/user/login', {
+        const response = await fetch('http://localhost:8080/user/login', {
             method: 'POST',
             body:formData,
+        
         })
         const data = await response.json()
         setToken(data.token);
@@ -23,9 +27,13 @@ function Login() {
         setMessage(data.message)
         setStatus(data.status)
     }
+
     useEffect(() => {
         sessionStorage.setItem("token" ,token)
     },[token])
+
+   
+
     useEffect(() =>{
         if(token) {
             alert(message)
@@ -34,7 +42,8 @@ function Login() {
             setStatus("")
             setEmail("")
             setPassword("")
-        }else if( message !== "") {
+            
+        }else if( message != "") {
             alert(message)
             setMessage("")
             setStatus("")
@@ -45,9 +54,9 @@ function Login() {
     return (
         <div className="logincontainer">
             <div className='loginregister'>
-                <h1>Opinion Poll<br />
-                    <span className='second'>Prticipating</span><br />
-                    <span className='third'>Quick Poll</span></h1>
+                <h1>Welcome Page<br />
+                    <span className='second'>One line text</span><br />
+                    <span className='third'> Will Be Here</span></h1>
                 <p>Sign in to continue access pages</p>
                 <p className='smallpara'>Don’t Have An Account?</p>
                 <Link to={'/register'}><button>Register</button></Link>
@@ -76,4 +85,5 @@ function Login() {
         </div>
     );
 }
+
 export default Login;
